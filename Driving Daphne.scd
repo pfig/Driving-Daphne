@@ -108,14 +108,14 @@ engine = { | path, pos, rate, dur |
   // Set up MIDI
   paths.size.do { | idx |
     ~nano.sliders[0][idx].action_( { | slider |
-      ~grainRate[idx] = ControlSpec( -2, 2, step: 0.01 ).map( slider.value ).postln;
+      ~grainAmp[idx] = ControlSpec( 0, 1, step: 0.01 ).map( slider.value ).postln;
     }
   )};
 
 
   paths.size.do { | idx |
     ~nano.knobs[0][idx].action_( { | knob |
-      ~grainAmp[idx] = ControlSpec( 0, 1, step: 0.01 ).map( knob.value ).postln;
+      ~grainRate[idx] = ControlSpec( -1, 1, step: 0.01 ).map( knob.value ).postln;
     }
   )};
 
