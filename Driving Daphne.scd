@@ -89,7 +89,7 @@ engine = { | path, pos, rate, dur |
   var duration;  // grain duration
   var paths;     // the list of files to use as grain sources
   var silo;      // an array to store the grains
-  //  ~grainAmp;  // the amplitude for a grain, 1/n
+  //  ~grainAmp;  // the amplitude for a grain, 1/n when it starts
   //  ~grainRate; // the rate for a grain
 
   paths = PathName( path ).entries;
