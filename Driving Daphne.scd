@@ -55,7 +55,7 @@ SynthDef( \glitch, { | buf, out = 0, freq = 440, amp = 1, dur = 0.25 |
 }).add;
 
 // A grain to play the foundation
-SynthDef( \foundation, { | buf, out = 0, rate = 1, amp = 0.5, offset = 0, dur = 0.1 |
+SynthDef( \foundation, { | buf, out = 0, rate = 1, amp = 0.8, offset = 0, dur = 0.1 |
   var sound, env;
   
   // a crude ADSR envelope
