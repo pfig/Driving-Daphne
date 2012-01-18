@@ -71,7 +71,7 @@ SynthDef( \foundation, { | buf, out = 0, rate = 1, amp = 0.8, offset = 0, dur = 
 SynthDef( \grain, { | buf, out = 0, rate = 1, amp = 1, dur = 0.03, offset = 0 |
   var sound, env;
   
-  env = Env( [ 0, 1, 0 ], [ 0.5 * dur, 0.5 * dur ] );
+  env = Env( [ 0, 1, 0.4, 0 ], [ 0.2 * dur, 0.5 * dur, 0.3 * dur ] );
 
   sound = PlayBuf.ar( 2, buf, BufRateScale.ir( buf ) * rate, startPos: offset, loop: 1 );
   sound = sound * EnvGen.kr( env, doneAction: 2 );
