@@ -124,8 +124,7 @@ engine = { | path, pos, rate, dur |
     s.sync;
     
     silo[idx] = { loop {
-	  position[idx] = buffer.numFrames.rand;
-//      if ( position[idx] > buffer.numFrames ) { position[idx] = 0 } { position[idx] = position[idx] + rrand( 4410, 12000 ) };
+      if ( position[idx] > buffer.numFrames ) { position[idx] = 0 } { position[idx] = position[idx] + rrand( 4410, 12000 ) };
       Synth( \grain, [
         \buf, buffer,
         \rate, ~grainRate[idx],
